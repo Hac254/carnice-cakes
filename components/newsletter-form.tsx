@@ -40,7 +40,7 @@ export function NewsletterForm() {
         variant: "default",
       })
       e.currentTarget.reset()
-    } catch (error) {
+    } catch (_) { // Use underscore to indicate unused parameter
       toast({
         title: "Error",
         description: "Failed to subscribe. Please try again later.",

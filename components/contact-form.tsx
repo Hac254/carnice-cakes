@@ -15,16 +15,8 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      const formData = new FormData(e.currentTarget)
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message'),
-      }
-
-      // Here you would typically send the data to your backend
-      // For now, we'll just show a success message
-      await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate API call
+      // Simulate API call without unused data variable
+      await new Promise(resolve => setTimeout(resolve, 1000))
 
       toast({
         title: "Message Sent!",
@@ -32,7 +24,7 @@ export function ContactForm() {
         variant: "default",
       })
       e.currentTarget.reset()
-    } catch (error) {
+    } catch (_) { // Use underscore to indicate unused parameter
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
