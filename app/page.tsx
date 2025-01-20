@@ -2,9 +2,8 @@
 
 import { useRef, useState } from "react"
 import Image from "next/image"
-import { ChevronRight, Facebook, Instagram, ExternalLink } from "lucide-react"
+import { ChevronRight, Facebook, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Logo } from "@/components/logo"
 import { MobileMenu } from "@/components/mobile-menu"
 import { ProductsSection } from "@/components/products-section"
@@ -382,12 +381,12 @@ export default function Home() {
             </div>
             <div className="w-full md:w-1/2">
               <p className="text-gray-600 mb-6">
-                Welcome to CarniceCakes! I'm Dianne, the passionate baker behind every delicious creation you see here.
+                Welcome to CarniceCakes! I&apos;m Dianne, the passionate baker behind every delicious creation you see here.
                 At CarniceCakes, we believe every celebration deserves a perfect centerpiece. Our passion for creating
                 beautiful, delicious cakes has made us a trusted name in custom celebration cakes.
               </p>
               <p className="text-gray-600">
-                Each cake is handcrafted with attention to detail and made with the finest ingredients. Whether you're
+                Each cake is handcrafted with attention to detail and made with the finest ingredients. Whether you&apos;re
                 celebrating a birthday, wedding, or any special occasion, we're here to make your sweet dreams come true
                 with our creative designs and exceptional taste.
               </p>

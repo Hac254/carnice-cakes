@@ -13,21 +13,21 @@ export function NewsletterForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const email = new FormData(e.currentTarget).get("email") as string
+    const email = new FormData(e.currentTarget).get('email') as string
 
     try {
-      const response = await fetch("https://api.brevo.com/v3/contacts", {
-        method: "POST",
+      await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
         headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "api-key": "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",
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'api-key': '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'
         },
         body: JSON.stringify({
           email,
           listIds: [2], // Update this with your actual list ID
-          updateEnabled: true,
-        }),
+          updateEnabled: true
+        })
       })
 
       toast({
@@ -35,7 +35,7 @@ export function NewsletterForm() {
         description: "Thank you for subscribing to our newsletter.",
       })
       e.currentTarget.reset()
-    } catch (error) {
+    } catch {
       toast({
         title: "Successfully Subscribed!",
         description: "Thank you for subscribing to our newsletter.",

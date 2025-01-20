@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { useToast } from "@/hooks/use-toast"
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useToast } from '@/hooks/use-toast'
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -14,19 +14,17 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
         body: new FormData(e.currentTarget),
       })
-
-      const data = await response.json()
 
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll get back to you soon!",
       })
       e.currentTarget.reset()
-    } catch (error) {
+    } catch {
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We'll get back to you soon!",
