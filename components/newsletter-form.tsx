@@ -21,7 +21,7 @@ export function NewsletterForm() {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          'api-key': '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'
+          'api-key': process.env.NEXT_PUBLIC_SENDINBLUE_API_KEY || ''
         },
         body: JSON.stringify({
           email,

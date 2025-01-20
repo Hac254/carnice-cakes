@@ -228,14 +228,14 @@ const openWhatsApp = () => {
   const phoneNumber = "+254738824713"
   const message = encodeURIComponent(
     "Hello CarniceCakes! 🎂✨\n\n" +
-      "I'm excited to order a delightful creation from your magical bakery. " +
+      "I&apos;m excited to order a delightful creation from your magical bakery. " +
       "Could you please help me with the following?\n\n" +
-      "1. I'm looking for a cake for [occasion, e.g., birthday, wedding, anniversary]\n" +
+      "1. I&apos;m looking for a cake for [occasion, e.g., birthday, wedding, anniversary]\n" +
       "2. My preferred flavors are [list 1-3 flavors]\n" +
-      "3. I'd love a design featuring [theme or colors]\n" +
+      "3. I&apos;d love a design featuring [theme or colors]\n" +
       "4. The cake should serve approximately [number] people\n" +
       "5. I need it ready by [date]\n\n" +
-      "I can't wait to discuss the sweet details with you and create something truly special! " +
+      "I can&apos;t wait to discuss the sweet details with you and create something truly special! " +
       "Thank you for your artistry and passion in cake-making. 🙏🍰",
   )
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank")
@@ -387,7 +387,7 @@ export default function Home() {
               </p>
               <p className="text-gray-600">
                 Each cake is handcrafted with attention to detail and made with the finest ingredients. Whether you&apos;re
-                celebrating a birthday, wedding, or any special occasion, we're here to make your sweet dreams come true
+                celebrating a birthday, wedding, or any special occasion, we&apos;re here to make your sweet dreams come true
                 with our creative designs and exceptional taste.
               </p>
             </div>
