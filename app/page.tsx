@@ -228,9 +228,9 @@ const openWhatsApp = () => {
   const phoneNumber = "+254738824713"
   const message = encodeURIComponent(
     "Hello CarniceCakes! 🎂✨\n\n" +
-      "I&apos;m excited to order a delightful creation from your magical bakery. " +
+      "I&#39m excited to order a delightful creation from your magical bakery. " +
       "Could you please help me with the following?\n\n" +
-      "1. I&apos;m looking for a cake for [occasion, e.g., birthday, wedding, anniversary]\n" +
+      "1. I&#39m looking for a cake for [occasion, e.g., birthday, wedding, anniversary]\n" +
       "2. My preferred flavors are [list 1-3 flavors]\n" +
       "3. I&apos;d love a design featuring [theme or colors]\n" +
       "4. The cake should serve approximately [number] people\n" +
