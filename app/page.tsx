@@ -260,7 +260,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Navigation */}
       <nav className="fixed w-full bg-gradient-to-r from-red-600 to-orange-500 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -286,11 +286,13 @@ export default function Home() {
       {/* Hero Section */}
       <section
         ref={sectionRefs.home}
-        className="bg-gradient-to-br from-red-600 via-red-500 to-orange-400 text-white pt-24"
+        className="bg-gradient-to-br from-red-600 via-red-500 to-orange-400 text-white pt-20 md:pt-24 w-full"
       >
-        <div className="container mx-auto px-4 py-12 md:py-24 grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight">Creating Sweet Moments Of Life</h1>
+        <div className="container mx-auto px-4 py-8 md:py-24 grid md:grid-cols-2 gap-8 items-center">
+          <div className="text-center md:text-left space-y-6">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight max-w-full">
+              Creating Sweet Moments Of Life
+            </h1>
             <p className="mt-6 text-lg text-red-100 max-w-md">
               Specializing in custom celebration cakes that bring your dreams to life. From character cakes to elegant
               wedding designs.
@@ -343,7 +345,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="relative h-[300px] sm:h-[400px] md:h-[600px]">
+          <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] order-first md:order-last w-full">
             <Image
               src="https://i.ibb.co/WyKGmHd/Whats-App-Image-2025-01-20-at-12-11-10-PM.jpg"
               alt="CarniceCakes signature cakes"
@@ -356,9 +358,11 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section ref={sectionRefs.about} className="py-16 bg-white">
+      <section ref={sectionRefs.about} className="py-12 md:py-16 bg-white w-full">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-8">About CarniceCakes</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-center text-gray-900 mb-8">
+            About CarniceCakes
+          </h2>
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/2">
               <div
@@ -399,7 +403,7 @@ export default function Home() {
       <ProductsSection products={products} />
 
       {/* Gallery Section */}
-      <section ref={sectionRefs.gallery} className="py-16 bg-gradient-to-br from-red-100 to-orange-100">
+      <section ref={sectionRefs.gallery} className="py-16 bg-gradient-to-br from-red-100 to-orange-100 w-full">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-8">Our Gallery</h2>
           <Slideshow products={products} />
@@ -407,9 +411,9 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section ref={sectionRefs.contact} className="py-16 bg-white">
+      <section ref={sectionRefs.contact} className="py-16 bg-white w-full">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-8">Contact Us</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-center text-gray-900 mb-8">Contact Us</h2>
           <div className="max-w-xl mx-auto">
             <ContactForm />
           </div>
@@ -417,10 +421,10 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="bg-gradient-to-br from-red-100 to-orange-100 py-16">
+      <section className="bg-gradient-to-br from-red-100 to-orange-100 py-16 w-full">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-serif font-bold text-red-700 mb-4">Subscribe for Sweet Updates</h2>
-          <p className="text-gray-600 mb-8 max-w-md mx-auto">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-red-700 mb-4">Subscribe for Sweet Updates</h2>
+          <p className="text-gray-600 mb-8 max-w-md mx-auto px-4 sm:px-0">
             Join our newsletter and get 10% off your first order plus updates about new designs and special offers.
           </p>
           <NewsletterForm />
@@ -428,12 +432,11 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-red-800 to-red-900 text-white py-12">
+      <footer className="bg-gradient-to-br from-red-800 to-red-900 text-white py-8 md:py-12 w-full">
         <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div>
+          <div className="text-center sm:text-left">
             <Logo />
             <p className="mt-4 text-sm opacity-80">Creating memorable celebrations since 2020.</p>
-            
           </div>
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>

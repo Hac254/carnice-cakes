@@ -60,13 +60,23 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply min-h-screen bg-white text-gray-900;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+}
+
+@layer utilities {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
   }
 }

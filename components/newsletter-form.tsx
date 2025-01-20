@@ -16,7 +16,7 @@ export function NewsletterForm() {
     const email = new FormData(e.currentTarget).get('email') as string
 
     try {
-      await fetch('https://api.brevo.com/v3/contacts', {
+      const response = await fetch('https://api.brevo.com/v3/contacts', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -30,32 +30,41 @@ export function NewsletterForm() {
         })
       })
 
+      if (!response.ok) {
+        throw new Error('Failed to subscribe')
+      }
+
       toast({
         title: "Successfully Subscribed!",
         description: "Thank you for subscribing to our newsletter.",
+        variant: "default",
       })
       e.currentTarget.reset()
-    } catch {
+    } catch (error) {
       toast({
-        title: "Successfully Subscribed!",
-        description: "Thank you for subscribing to our newsletter.",
+        title: "Error",
+        description: "Failed to subscribe. Please try again later.",
+        variant: "destructive",
       })
-      e.currentTarget.reset()
     } finally {
       setIsSubmitting(false)
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto px-4 sm:px-0">
       <Input
         type="email"
         name="email"
         placeholder="Enter your email"
         required
-        className="border-red-200 focus-visible:ring-red-500"
+        className="border-red-200 focus-visible:ring-red-500 min-w-0"
       />
-      <Button type="submit" className="bg-red-600 hover:bg-red-700 w-full sm:w-auto" disabled={isSubmitting}>
+      <Button 
+        type="submit" 
+        className="bg-red-600 hover:bg-red-700 w-full sm:w-auto whitespace-nowrap" 
+        disabled={isSubmitting}
+      >
         {isSubmitting ? "Subscribing..." : "Subscribe"}
       </Button>
     </form>
