@@ -379,7 +379,7 @@ export default function Home() {
               <ImageModal
                 isOpen={isImageModalOpen}
                 onClose={() => setIsImageModalOpen(false)}
-                src="https://i.ibb.co/ncDVKpv/Whats-App-Image-2025-01-19-at-3-06-33-PM-1.jpg"
+                src="https://i.ibb.co/t2pCByT/Whats-App-Image-2025-01-22-at-12-01-52-PM.jpg"
                 alt="CarniceCakes Creator"
               />
             </div>
