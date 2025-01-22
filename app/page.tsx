@@ -370,7 +370,7 @@ export default function Home() {
                 onClick={() => setIsImageModalOpen(true)}
               >
                 <Image
-                  src="https://i.ibb.co/ncDVKpv/Whats-App-Image-2025-01-19-at-3-06-33-PM-1.jpg"
+                  src="https://i.ibb.co/t2pCByT/Whats-App-Image-2025-01-22-at-12-01-52-PM.jpg"
                   alt="CarniceCakes Creator"
                   fill
                   className="rounded-lg shadow-lg object-cover"
