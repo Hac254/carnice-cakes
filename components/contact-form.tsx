@@ -24,7 +24,7 @@ export function ContactForm() {
         variant: "default",
       })
       e.currentTarget.reset()
-    } catch (error) { // Use a meaningful name for the error
+    } catch { // Removed the error variable
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
