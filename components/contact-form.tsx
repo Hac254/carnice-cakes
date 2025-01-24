@@ -1,30 +1,44 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { useToast } from '@/hooks/use-toast'
+import { useState, useRef } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { useToast } from "@/hooks/use-toast"
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    try {
-      // Simulate API call without unused data variable
-      await new Promise(resolve => setTimeout(resolve, 1000))
+    const formData = new FormData(e.currentTarget)
 
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
-        variant: "default",
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
       })
-      e.currentTarget.reset()
-    } catch { // Removed the error variable
+
+      const data = await response.json()
+
+      if (data.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+          variant: "default",
+        })
+        if (formRef.current) {
+          formRef.current.reset()
+        }
+      } else {
+        throw new Error(data.message)
+      }
+    } catch (error) {
+      console.error("Error sending message:", error)
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
@@ -36,7 +50,8 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 w-full px-4 sm:px-0">
+    <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 w-full px-4 sm:px-0">
+      <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
       <div className="space-y-4">
         <div>
           <Input
@@ -64,11 +79,7 @@ export function ContactForm() {
           />
         </div>
       </div>
-      <Button 
-        type="submit" 
-        className="w-full bg-red-600 hover:bg-red-700"
-        disabled={isSubmitting}
-      >
+      <Button type="submit" className="w-full bg-red-600 hover:bg-red-700" disabled={isSubmitting}>
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
     </form>

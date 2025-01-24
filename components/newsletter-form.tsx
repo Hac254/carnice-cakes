@@ -13,25 +13,19 @@ export function NewsletterForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const email = new FormData(e.currentTarget).get('email') as string
+    const email = new FormData(e.currentTarget).get("email") as string
 
     try {
-      const response = await fetch('https://api.brevo.com/v3/contacts', {
-        method: 'POST',
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          'api-key': process.env.NEXT_PUBLIC_SENDINBLUE_API_KEY || ''
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          email,
-          listIds: [2], // Update this with your actual list ID
-          updateEnabled: true
-        })
+        body: JSON.stringify({ email }),
       })
 
       if (!response.ok) {
-        throw new Error('Failed to subscribe')
+        throw new Error("Failed to subscribe")
       }
 
       toast({
@@ -40,7 +34,7 @@ export function NewsletterForm() {
         variant: "default",
       })
       e.currentTarget.reset()
-    } catch { // Removed the error variable
+    } catch (error) {
       toast({
         title: "Error",
         description: "Failed to subscribe. Please try again later.",
@@ -60,9 +54,9 @@ export function NewsletterForm() {
         required
         className="border-red-200 focus-visible:ring-red-500 min-w-0"
       />
-      <Button 
-        type="submit" 
-        className="bg-red-600 hover:bg-red-700 w-full sm:w-auto whitespace-nowrap" 
+      <Button
+        type="submit"
+        className="bg-red-600 hover:bg-red-700 w-full sm:w-auto whitespace-nowrap"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Subscribing..." : "Subscribe"}
