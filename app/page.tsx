@@ -533,6 +533,20 @@ export default function Home() {
             </ul>
           </div>
         </div>
+        <div className="container mx-auto px-4 mt-8 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
+            <p>© {new Date().getFullYear()} CarniceCakes. All rights reserved.</p>
+            <a 
+              href="https://wafula-josh.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 md:mt-0 hover:text-white transition-colors flex items-center gap-1"
+            >
+              Designed & Developed by
+              <span className="font-semibold text-red-300 hover:text-red-200">Joshua Wafula</span>
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   )
