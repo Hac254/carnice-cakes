@@ -253,21 +253,21 @@ const products = [
   },
   {
     id: "g4",
-    name: "Royal Money Gift",
+    name: "Royal Special Ocassion Gift",
     description: "Exquisite money arrangement perfect for special celebrations.",
     image: "https://i.ibb.co/Rk0YrCfy/Whats-App-Image-2025-02-16-at-8-35-26-PM-1.jpg",
     category: "Gifts & Money Bouquets"
   },
   {
     id: "g5",
-    name: "Elegant Money Display",
+    name: "Luxury Gift Arrangement",
     description: "Beautiful money arrangement with artistic presentation.",
     image: "https://i.ibb.co/6RjS5F5F/Whats-App-Image-2025-02-16-at-8-35-26-PM.jpg",
     category: "Gifts & Money Bouquets"
   },
   {
     id: "g6",
-    name: "Luxury Gift Arrangement",
+    name: "Elegant Money Boquet",
     description: "Premium money bouquet with sophisticated design.",
     image: "https://i.ibb.co/84SJLNQS/Whats-App-Image-2025-02-16-at-8-35-25-PM-2.jpg",
     category: "Gifts & Money Bouquets"
