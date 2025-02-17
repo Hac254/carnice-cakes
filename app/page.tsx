@@ -200,10 +200,10 @@ const products = [
   },
   {
     id: "24",
-    name: "Tall Wedding Cake",
-    description: "Tall wedding cake with giveaways and elegant decorations.",
+    name: "Medic's Themed Cake",
+    description: "Medic's Themed Cake for adults, perfect for colorful celebrations.",
     price: "KSH 50,000",
-    image: "https://i.ibb.co/LRHRDJ7/Whats-App-Image-2025-01-19-at-3-06-33-PM.jpg",
+    image: "https://i.ibb.co/TRQ6Js1/Whats-App-Image-2025-01-19-at-3-06-37-PM.jpg",
     category: "Wedding Cakes",
   },
   {
@@ -230,6 +230,76 @@ const products = [
     image: "https://i.ibb.co/7r0Tw8s/Whats-App-Image-2025-01-19-at-3-06-38-PM-1.jpg",
     category: "Custom Cakes",
   },
+  {
+    id: "g1",
+    name: "Classic Money Bouquet",
+    description: "Elegant money bouquet arrangement perfect for special occasions and celebrations.",
+    image: "https://i.ibb.co/8LGP30sh/Whats-App-Image-2025-02-16-at-8-35-28-PM.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g2",
+    name: "Premium Money Arrangement",
+    description: "Luxurious money bouquet with artistic presentation and elegant design.",
+    image: "https://i.ibb.co/YB1K0BPG/Whats-App-Image-2025-02-16-at-8-35-27-PM-1.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g3",
+    name: "Deluxe Money Bouquet",
+    description: "Sophisticated money bouquet arrangement with premium presentation.",
+    image: "https://i.ibb.co/qYw7vPH1/Whats-App-Image-2025-02-16-at-8-35-27-PM.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g4",
+    name: "Royal Money Gift",
+    description: "Exquisite money arrangement perfect for special celebrations.",
+    image: "https://i.ibb.co/Rk0YrCfy/Whats-App-Image-2025-02-16-at-8-35-26-PM-1.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g5",
+    name: "Elegant Money Display",
+    description: "Beautiful money arrangement with artistic presentation.",
+    image: "https://i.ibb.co/6RjS5F5F/Whats-App-Image-2025-02-16-at-8-35-26-PM.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g6",
+    name: "Luxury Gift Arrangement",
+    description: "Premium money bouquet with sophisticated design.",
+    image: "https://i.ibb.co/84SJLNQS/Whats-App-Image-2025-02-16-at-8-35-25-PM-2.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g7",
+    name: "Special Occasion Money Gift",
+    description: "Unique money arrangement for memorable celebrations.",
+    image: "https://i.ibb.co/f3S36NB/Whats-App-Image-2025-02-16-at-8-35-25-PM-1.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g8",
+    name: "Premium Gift Display",
+    description: "Elegant money bouquet with creative presentation.",
+    image: "https://i.ibb.co/JWDwX9mx/Whats-App-Image-2025-02-16-at-8-35-25-PM.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g9",
+    name: "Celebration Money Gift",
+    description: "Beautifully arranged money bouquet for special moments.",
+    image: "https://i.ibb.co/FQcSJqp/Whats-App-Image-2025-02-16-at-8-35-24-PM-1.jpg",
+    category: "Gifts & Money Bouquets"
+  },
+  {
+    id: "g10",
+    name: "Exclusive Money Bouquet",
+    description: "Premium money arrangement with luxurious presentation.",
+    image: "https://i.ibb.co/v45JrMHp/Whats-App-Image-2025-02-16-at-8-35-24-PM.jpg",
+    category: "Gifts & Money Bouquets"
+  }
 ]
 
 const openWhatsApp = () => {

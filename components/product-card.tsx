@@ -11,7 +11,6 @@ interface Product {
   id: string
   name: string
   description: string
-  price: string
   image: string
   category: string
 }
@@ -25,7 +24,7 @@ export function ProductCard({ product }: { product: Product }) {
       "Hello CarniceCakes! 🎂✨\n\n" +
       `I'm absolutely in love with your ${product.name} and I'd love to order it! ` +
       "Could you please help me with the following details?\n\n" +
-      `1. I'm interested in the ${product.name} priced at ${product.price}\n` +
+      `1. I'm interested in the ${product.name}\n` +
       "2. Is it possible to customize the flavors? My favorites are [list 1-3 flavors]\n" +
       "3. I need this cake for [occasion, e.g., birthday, wedding, anniversary]\n" +
       "4. The cake should serve approximately [number] people\n" +
@@ -34,39 +33,36 @@ export function ProductCard({ product }: { product: Product }) {
       "Thank you for your incredible cake artistry! 🙏🍰"
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-  }, [product.name, product.price]);
+  }, [product.name]);
 
   return (
     <>
-      <Card className="overflow-hidden cursor-pointer transition-transform hover:scale-105"
-        onClick={() => setShowDialog(true)}>
-        <CardContent className="p-0">
-          <div className="aspect-square relative">
+      <Card className="group cursor-pointer" onClick={() => setShowDialog(true)}>
+        <CardContent className="p-4">
+          <div className="relative w-full aspect-square mb-3">
             <Image
               src={product.image || "/placeholder.svg"}
               alt={product.name}
               fill
-              className="object-cover"
+              className="object-cover rounded-lg"
             />
           </div>
-          <div className="p-4">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="font-semibold text-lg text-red-700">{product.name}</h3>
-              <Badge variant="secondary" className="bg-red-50 text-red-700">
-                {product.price}
-              </Badge>
+          <div className="space-y-2">
+            <div className="flex justify-between items-start">
+              <h3 className="font-semibold text-lg">{product.name}</h3>
+              <Badge variant="secondary">{product.category}</Badge>
             </div>
-            <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
+            <p className="text-sm text-gray-500 line-clamp-2">{product.description}</p>
           </div>
         </CardContent>
       </Card>
 
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent>
           <DialogHeader>
             <DialogTitle>{product.name}</DialogTitle>
           </DialogHeader>
-          <div className="relative h-[400px] w-full">
+          <div className="relative w-full aspect-square">
             <Image
               src={product.image || "/placeholder.svg"}
               alt={product.name}
@@ -75,8 +71,7 @@ export function ProductCard({ product }: { product: Product }) {
             />
           </div>
           <p className="text-gray-600">{product.description}</p>
-          <div className="flex justify-between items-center">
-            <p className="text-2xl font-bold text-red-700">{product.price}</p>
+          <div className="flex justify-end">
             <Button className="bg-red-600 hover:bg-red-700" onClick={openWhatsApp}>
               Order Now
             </Button>
