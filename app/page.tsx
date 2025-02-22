@@ -110,14 +110,14 @@ const products = [
     image: "https://i.ibb.co/SJBpx20/image.png",
     category: "Celebration Cakes",
   },
-  {
+  /*{
     id: "13",
-    name: "Graduation Cake",
+    name: "Women Themed Cake",
     description: "Celebratory graduation-themed cake with cap and diploma decorations.",
     price: "KSH 6,500",
     image: "https://i.ibb.co/NrFCN9y/image.png",
     category: "Celebration Cakes",
-  },
+  },*/
   {
     id: "14",
     name: "Half Dozen Cupcakes",
