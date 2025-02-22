@@ -36,7 +36,7 @@ const products = [
     description: "Elegant ballet-themed cake with pink drip and ballerina decorations.",
     price: "KSH 6,500",
     image: "https://i.ibb.co/1vJ8KHG/Whats-App-Image-2025-01-20-at-12-11-10-PM-3.jpg",
-    category: "Theme Cakes",
+    category: "Character Cakes",
   },
   {
     id: "4",
@@ -84,7 +84,7 @@ const products = [
     description: "Traditional wedding cake with intricate piping and sugar flowers.",
     price: "KSH 10,300",
     image: "https://i.ibb.co/cg37B5R/Whats-App-Image-2025-01-19-at-3-06-31-PM-2.jpg",
-    category: "Theme Cakes",
+    category: "Wedding Cakes",
   },
   {
     id: "10",
@@ -96,10 +96,10 @@ const products = [
   },
   {
     id: "11",
-    name: "Themed Graduation Cake",
-    description: "Themed graduation cake with edible toppers , great for special events like graduations.",
+    name: "Women Themed Cake",
+    description: "Women Themed cake with edible toppers , great for celebrating special women in your life.",
     price: "KSH 15,000",
-    image: "https://i.ibb.co/WkpD4XK/Whats-App-Image-2025-01-19-at-3-06-32-PM-1.jpg",
+    image: "https://i.ibb.co/93kG5xM9/Whats-App-Image-2025-02-21-at-9-33-01-AM.jpg",
     category: "Theme Cakes",
   },
   {
@@ -140,7 +140,7 @@ const products = [
     description: "Simple cupcakes ",
     price: "KSH 6,500",
     image: "https://i.ibb.co/WcFhc7w/Whats-App-Image-2025-01-19-at-3-11-15-PM-2.jpg",
-    category: "Character Cakes",
+    category: "Cupcakes",
   },
   {
     id: "17",
