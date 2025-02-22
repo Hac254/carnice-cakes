@@ -48,10 +48,10 @@ const products = [
   },
   {
     id: "5",
-    name: "Superhero Cupcakes",
-    description: "Assorted superhero-themed cupcakes, perfect for parties or special treats.",
+    name: "Baby shark themed cake",
+    description: "Baby shark themed cake for kids, perfect for colorful celebrations.",
     price: "KSH 2,500 per dozen",
-    image: "https://i.ibb.co/kmYs6Gx/Whats-App-Image-2025-01-19-at-3-11-16-PM-1.jpg",
+    image: "https://i.ibb.co/KxvGgrC7/Whats-App-Image-2025-02-16-at-11-54-22-PM-1.jpg",
     category: "Cupcakes",
   },
   {
@@ -184,10 +184,10 @@ const products = [
   },
   {
     id: "22",
-    name: "Semi Naked Cake with Precuts",
-    description: "Semi Naked Cake with Precuts and fresh flowers.",
+    name: "Masha themed cake",
+    description: "Masha themed cake for kids, perfect for colorful celebrations.",
     price: "KSH 41,000",
-    image: "https://i.ibb.co/Db0gL4b/Whats-App-Image-2025-01-19-at-3-06-32-PM-2.jpg",
+    image: "https://i.ibb.co/39Sww0tP/Whats-App-Image-2025-02-16-at-11-54-21-PM.jpg",
     category: "Wedding Cakes",
   },
   {
@@ -228,6 +228,14 @@ const products = [
     description: "Orange coconut cake with coconut cream cheese frosting and toasted coconut flakes.",
     price: "KSH 4,500",
     image: "https://i.ibb.co/7r0Tw8s/Whats-App-Image-2025-01-19-at-3-06-38-PM-1.jpg",
+    category: "Custom Cakes",
+  },
+  {
+    id: "28",
+    name: "Sonic themed cake",
+    description: "Sonic themed cake for kids, perfect for colorful celebrations.",
+    price: "KSH 4,500",
+    image: "https://i.ibb.co/D36HV7q/Whats-App-Image-2025-02-16-at-11-54-22-PM.jpg",
     category: "Custom Cakes",
   },
   {
