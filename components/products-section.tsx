@@ -26,7 +26,7 @@ export function ProductsSection({ products }: ProductsSectionProps) {
 
   return (
     <section id="menu" className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-8">Our Signature Creations</h2>
+      <h2 className="text-3xl font-serif font-bold text-center text-primary mb-8">Our Signature Creations</h2>
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         {categories.map((category) => (
           <Button
@@ -34,8 +34,8 @@ export function ProductsSection({ products }: ProductsSectionProps) {
             variant={selectedCategory === category ? "default" : "outline"}
             className={`mb-2 ${
               selectedCategory === category
-                ? "bg-red-600 hover:bg-red-700 text-white"
-                : "border-red-200 text-red-700 hover:bg-red-50"
+                ? ""
+                : "border-primary/20 text-primary hover:bg-primary/10"
             }`}
             onClick={() => setSelectedCategory(category)}
           >

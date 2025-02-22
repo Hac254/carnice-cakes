@@ -65,7 +65,7 @@ export function ContactForm() {
             name="name"
             placeholder="Your Name"
             required
-            className="border-red-200 focus-visible:ring-red-500 w-full"
+            className="border-primary/20 focus-visible:ring-primary w-full"
           />
         </div>
         <div>
@@ -74,7 +74,7 @@ export function ContactForm() {
             name="email"
             placeholder="Your Email"
             required
-            className="border-red-200 focus-visible:ring-red-500 w-full"
+            className="border-primary/20 focus-visible:ring-primary w-full"
           />
         </div>
         <div>
@@ -82,11 +82,11 @@ export function ContactForm() {
             name="message"
             placeholder="Your Message"
             required
-            className="min-h-[150px] border-red-200 focus-visible:ring-red-500 w-full"
+            className="min-h-[150px] border-primary/20 focus-visible:ring-primary w-full"
           />
         </div>
       </div>
-      <Button type="submit" className="w-full bg-red-600 hover:bg-red-700" disabled={isSubmitting}>
+      <Button type="submit" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
     </form>

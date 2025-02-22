@@ -37,7 +37,7 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <>
-      <Card className="group cursor-pointer" onClick={() => setShowDialog(true)}>
+      <Card className="group cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setShowDialog(true)}>
         <CardContent className="p-4">
           <div className="relative w-full aspect-square mb-3">
             <Image
@@ -49,10 +49,10 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
           <div className="space-y-2">
             <div className="flex justify-between items-start">
-              <h3 className="font-semibold text-lg">{product.name}</h3>
-              <Badge variant="secondary">{product.category}</Badge>
+              <h3 className="font-semibold text-lg text-primary">{product.name}</h3>
+              <Badge variant="secondary" className="bg-primary/10 text-primary">{product.category}</Badge>
             </div>
-            <p className="text-sm text-gray-500 line-clamp-2">{product.description}</p>
+            <p className="text-sm text-muted-foreground line-clamp-2">{product.description}</p>
           </div>
         </CardContent>
       </Card>
@@ -60,7 +60,7 @@ export function ProductCard({ product }: { product: Product }) {
       <Dialog open={showDialog} onOpenChange={setShowDialog}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>{product.name}</DialogTitle>
+            <DialogTitle className="text-primary">{product.name}</DialogTitle>
           </DialogHeader>
           <div className="relative w-full aspect-square">
             <Image
@@ -70,9 +70,9 @@ export function ProductCard({ product }: { product: Product }) {
               className="object-contain"
             />
           </div>
-          <p className="text-gray-600">{product.description}</p>
+          <p className="text-muted-foreground">{product.description}</p>
           <div className="flex justify-end">
-            <Button className="bg-red-600 hover:bg-red-700" onClick={openWhatsApp}>
+            <Button onClick={openWhatsApp}>
               Order Now
             </Button>
           </div>

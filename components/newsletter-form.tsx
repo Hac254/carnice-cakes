@@ -35,6 +35,7 @@ export function NewsletterForm() {
       })
       e.currentTarget.reset()
     } catch (error) {
+      console.error("Newsletter subscription error:", error);
       toast({
         title: "Error",
         description: "Failed to subscribe. Please try again later.",
@@ -52,11 +53,11 @@ export function NewsletterForm() {
         name="email"
         placeholder="Enter your email"
         required
-        className="border-red-200 focus-visible:ring-red-500 min-w-0"
+        className="border-primary/20 focus-visible:ring-primary min-w-0"
       />
       <Button
         type="submit"
-        className="bg-red-600 hover:bg-red-700 w-full sm:w-auto whitespace-nowrap"
+        className="w-full sm:w-auto whitespace-nowrap"
         disabled={isSubmitting}
       >
         {isSubmitting ? "Subscribing..." : "Subscribe"}

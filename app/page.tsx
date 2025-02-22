@@ -348,7 +348,7 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed w-full bg-gradient-to-r from-red-600 to-orange-500 z-50">
+      <nav className="fixed w-full bg-gradient-to-r from-blue-600 to-cyan-500 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Logo />
           <div className="hidden md:flex items-center gap-8 text-white">
@@ -356,12 +356,12 @@ export default function Home() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="hover:text-red-200 transition-colors"
+                className="hover:text-blue-200 transition-colors"
               >
                 {item}
               </button>
             ))}
-            <Button className="bg-white text-red-600 hover:bg-red-100" onClick={openWhatsApp}>
+            <Button className="bg-white text-blue-600 hover:bg-blue-50" onClick={openWhatsApp}>
               Order Now
             </Button>
           </div>
@@ -372,21 +372,21 @@ export default function Home() {
       {/* Hero Section */}
       <section
         ref={sectionRefs.home}
-        className="bg-gradient-to-br from-red-600 via-red-500 to-orange-400 text-white pt-20 md:pt-24 w-full"
+        className="bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 text-white pt-20 md:pt-24 w-full"
       >
         <div className="container mx-auto px-4 py-8 md:py-24 grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left space-y-6">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight max-w-full">
               Creating Sweet Moments Of Life
             </h1>
-            <p className="mt-6 text-lg text-red-100 max-w-md">
+            <p className="mt-6 text-lg text-blue-100 max-w-md">
               Specializing in custom celebration cakes that bring your dreams to life. From character cakes to elegant
               wedding designs.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-white text-red-600 hover:bg-red-100 w-full sm:w-auto"
+                className="bg-white text-blue-600 hover:bg-blue-50 w-full sm:w-auto"
                 onClick={openWhatsApp}
               >
                 Order Now
@@ -402,7 +402,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="mt-8">
-              <p className="text-red-100 mb-4">Follow us on social media for latest updates and designs!</p>
+              <p className="text-blue-100 mb-4">Follow us on social media for latest updates and designs!</p>
               <div className="flex gap-4">
                 <a
                   href="https://www.facebook.com/p/Carnice-cakes-pastry-100064069503802/"
@@ -489,7 +489,7 @@ export default function Home() {
       <ProductsSection products={products} />
 
       {/* Gallery Section */}
-      <section ref={sectionRefs.gallery} className="py-16 bg-gradient-to-br from-red-100 to-orange-100 w-full">
+      <section ref={sectionRefs.gallery} className="py-16 bg-gradient-to-br from-blue-100 to-cyan-100 w-full">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-serif font-bold text-center text-gray-900 mb-8">Our Gallery</h2>
           <Slideshow products={products} />
@@ -507,9 +507,9 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="bg-gradient-to-br from-red-100 to-orange-100 py-16 w-full">
+      <section className="bg-gradient-to-br from-blue-100 to-cyan-100 py-16 w-full">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-red-700 mb-4">Subscribe for Sweet Updates</h2>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-blue-700 mb-4">Subscribe for Sweet Updates</h2>
           <p className="text-gray-600 mb-8 max-w-md mx-auto px-4 sm:px-0">
             Join our newsletter and get 10% off your first order plus updates about new designs and special offers.
           </p>
@@ -518,7 +518,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-red-800 to-red-900 text-white py-8 md:py-12 w-full">
+      <footer className="bg-gradient-to-br from-blue-800 to-blue-900 text-white py-8 md:py-12 w-full">
         <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center sm:text-left">
             <Logo />
@@ -551,7 +551,7 @@ export default function Home() {
               className="mt-2 md:mt-0 hover:text-white transition-colors flex items-center gap-1"
             >
               Designed & Developed by
-              <span className="font-semibold text-red-300 hover:text-red-200">Joshua Wafula</span>
+              <span className="font-semibold text-blue-300 hover:text-blue-200">Joshua Wafula</span>
             </a>
           </div>
         </div>
