@@ -16,11 +16,18 @@ export function ContactForm() {
     setIsSubmitting(true)
 
     const formData = new FormData(e.currentTarget)
+    const formObject = Object.fromEntries(formData)
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          ...formObject
+        }),
       })
 
       const data = await response.json()
