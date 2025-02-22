@@ -56,8 +56,8 @@ const products = [
   },
   {
     id: "6",
-    name: "Fruit Tart",
-    description: "Delicious fruit tart with a buttery crust, vanilla custard, and fresh seasonal fruits.",
+    name: "Dozen Cupcakes",
+    description: "Dozen Fluffy Cupcakes topped with delicious buttercream icing.",
     price: "KSH 3,500",
     image: "https://i.ibb.co/pPxD3n4/Whats-App-Image-2025-01-19-at-3-11-15-PM.jpg",
     category: "Pastries",
@@ -136,8 +136,8 @@ const products = [
   },
   {
     id: "16",
-    name: "Minnie Mouse Cake",
-    description: "Charming Minnie Mouse-themed cake for Disney lovers.",
+    name: "Simple CupCakes",
+    description: "Simple cupcakes ",
     price: "KSH 6,500",
     image: "https://i.ibb.co/WcFhc7w/Whats-App-Image-2025-01-19-at-3-11-15-PM-2.jpg",
     category: "Character Cakes",
@@ -152,8 +152,8 @@ const products = [
   },
   {
     id: "18",
-    name: "Superhero Cake",
-    description: "Action-packed superhero-themed cake for the little heroes.",
+    name: "Kids themed Cake",
+    description: "Fun-Packed Kids-themed cake for the little heroes.",
     price: "KSH 7,000",
     image: "https://i.ibb.co/SRpdYGx/Whats-App-Image-2025-01-20-at-12-11-10-PM-1.jpg",
     category: "Character Cakes",
@@ -176,8 +176,8 @@ const products = [
   },
   {
     id: "21",
-    name: "Drip Cake with Macarons",
-    description: "Stylish drip cake adorned with colorful macarons and fresh flowers.",
+    name: " Gentleman Themed Cake",
+    description: "Stylish gentleman drip cake with stylish accents.",
     price: "KSH 8,000",
     image: "https://i.ibb.co/T1w204g/Whats-App-Image-2025-01-19-at-3-06-36-PM-1.jpg",
     category: "Celebration Cakes",
