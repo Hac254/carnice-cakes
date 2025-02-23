@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { siteMetadata } from './metadata'
 import "./globals.css";
 
-
-
 export const metadata: Metadata = {
-  
+  metadataBase: new URL(siteMetadata.siteUrl),
   title: {
     default: siteMetadata.title,
     template: `%s | ${siteMetadata.title}`,
@@ -29,6 +27,10 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
     },
+  },
+  // Add the verification meta tag here in the metadata object
+  verification: {
+    google: "OzR2w65fiSyePKQCnyI2Gp2Oa0d53YJTlNmXgBYJx0o",
   },
 };
 
