@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://carnicecakes.vercel.app/sitemap.xml
